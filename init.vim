@@ -6,6 +6,8 @@ Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-commentary'
+
 Plug 'easymotion/vim-easymotion'
 map gs <Plug>(easymotion-prefix)
 

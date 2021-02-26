@@ -15,6 +15,9 @@ Plug 'justinmk/vim-sneak'
 
 Plug 'unblevable/quick-scope'
 
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 100
+
 Plug 'rhysd/clever-f.vim'
 let g:clever_f_fix_key_direction = 1
 let g:clever_f_timeout_ms = 0.01
@@ -42,6 +45,9 @@ set expandtab
 
 " Y goes to the end of line
 :map Y y$
+
+" <C-U>, <C-D> keeps the cursor at the same place
+" set scroll=1
 
 " LSP
 " Plug 'neovim/nvim-lspconfig'

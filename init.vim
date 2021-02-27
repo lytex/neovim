@@ -31,6 +31,8 @@ let g:clever_f_timeout_ms = 0.01
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
 
+runtime lang.vim
+
 call plug#end()
 
 " No compatibility with vi

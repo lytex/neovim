@@ -40,6 +40,10 @@ call plug#end()
 " No compatibility with vi
 set nocompatible
 
+" Remap escape
+inoremap jk <Esc>
+
+syntax enable " enable syntax processing
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
@@ -53,9 +57,19 @@ set mouse=a
 set number relativenumber
 
 " Tabs
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990
+set tabstop=4 " number of visual spaces per TAB
+set softtabstop=4 " number of spaces in tab when editing
+set shiftwidth=4 " number of spaces per level of indentation
+set expandtab " expand tabs into spaces
+
+" Different tab/space stops"
+autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Y goes to the end of line
 :map Y y$

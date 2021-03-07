@@ -33,10 +33,15 @@ map , <Plug>(clever-f-repeat-back)
 
 runtime lang.vim
 
+Plug 'patstockwell/vim-monokai-tasty'
+
 call plug#end()
 
 " No compatibility with vi
 set nocompatible
+
+let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
 
 " Bidirectional integration with system clipboard
 set clipboard=unnamedplus
@@ -54,4 +59,5 @@ set expandtab
 
 " Y goes to the end of line
 :map Y y$
+
 

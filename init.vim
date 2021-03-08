@@ -35,6 +35,8 @@ runtime lang.vim
 
 Plug 'patstockwell/vim-monokai-tasty'
 
+Plug 'ActivityWatch/aw-watcher-vim'
+
 call plug#end()
 
 " No compatibility with vi

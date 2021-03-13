@@ -32,6 +32,8 @@ map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
 
 runtime lang.vim
+runtime jumphl.vim
+DoJumpHl 
 
 Plug 'patstockwell/vim-monokai-tasty'
 

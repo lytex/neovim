@@ -84,6 +84,13 @@ set clipboard=unnamedplus
 " Use mouse
 set mouse=a
 
+" ignore case when searching
+set ignorecase
+" match case when there is an upercase letter
+set smartcase
+" escape disables highlighting of current match
+map <esc> :nohl <cr>
+
 " Hybrid numbers
 set number relativenumber
 

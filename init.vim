@@ -35,6 +35,8 @@ runtime lang.vim
 runtime jumphl.vim
 DoJumpHl 
 
+runtime yinote.vim
+
 Plug 'patstockwell/vim-monokai-tasty'
 
 Plug 'ActivityWatch/aw-watcher-vim'

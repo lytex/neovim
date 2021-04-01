@@ -6,4 +6,4 @@ function Yinote()
     normal ggyG
 endfunction
 
-nmap <silent>  <C-]>  :call Yinote()<CR>
+nmap <silent>  <C-M-Y>  :call Yinote()<CR>

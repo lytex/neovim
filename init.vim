@@ -4,8 +4,10 @@ runtime firenvim.vim
 
 Plug 'ThePrimeagen/vim-be-good'
 
+" Surround an object with a character
 Plug 'tpope/vim-surround'
 
+" Comments with gc
 Plug 'tpope/vim-commentary'
 
 " Highlight possible motions
@@ -30,6 +32,11 @@ let g:clever_f_fix_key_direction = 1
 let g:clever_f_timeout_ms = 0.01
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Go to parent directories until there is an .git directory
+Plug 'airblade/vim-rooter'
 
 runtime lang.vim
 runtime jumphl.vim
@@ -66,6 +73,9 @@ set smartcase
 " escape disables highlighting of current match
 map <esc> :nohl <cr>
 
+" Live preview of replaced text
+set inccommand=nosplit
+
 " Hybrid numbers
 set number relativenumber
 
@@ -85,6 +95,6 @@ autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expand
 autocmd Filetype sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Y goes to the end of line
-:map Y y$
+map Y y$
 
 

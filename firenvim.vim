@@ -21,6 +21,7 @@ let fc['https://trello.com'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://outlook.office.com'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://app.slack.com'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://meet.google.com/'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https://meet.jit.si'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://av.esic.edu'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://docs.google.com'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https?://localhost:.*'] = { 'takeover': 'never', 'priority': 1 }

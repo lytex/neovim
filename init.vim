@@ -78,6 +78,8 @@ set inccommand=nosplit
 
 " Hybrid numbers
 set number relativenumber
+" Disable relative number in terminal
+autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Tabs
 " https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990

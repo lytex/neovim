@@ -50,8 +50,7 @@ Plug 'ActivityWatch/aw-watcher-vim'
 
 call plug#end()
 
-" No compatibility with vi
-set nocompatible
+set nocompatible " No compatibility with vi
 
 " Remap escape
 inoremap jk <Esc>
@@ -63,23 +62,19 @@ colorscheme vim-monokai-tasty
 " Bidirectional integration with system clipboard
 set clipboard=unnamedplus
 :vnoremap y "+y
-" Use mouse
-set mouse=a
+set mouse=a " Use mouse
 
-" ignore case when searching
-set ignorecase
-" match case when there is an upercase letter
-set smartcase
+set ignorecase " ignore case when searching
+set smartcase " match case when there is an upercase letter
 " escape disables highlighting of current match
 map <esc> :nohl <cr>
 
-" Live preview of replaced text
-set inccommand=nosplit
+set inccommand=nosplit " Live preview of replaced text
 
-" Hybrid numbers
-set number relativenumber
-" Disable relative number in terminal
-autocmd TermOpen * setlocal nonumber norelativenumber
+" Y goes to the end of line
+map Y y$
+set number relativenumber " Hybrid numbers
+autocmd TermOpen * setlocal nonumber norelativenumber " Disable relative number in terminal
 
 " Tabs
 " https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990
@@ -96,7 +91,5 @@ autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-" Y goes to the end of line
-map Y y$
 
 

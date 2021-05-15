@@ -1,8 +1,13 @@
-call plug#begin(stdpath('data') . '/plugged')
+if has('nvim')
+    call plug#begin(stdpath('data') . '/plugged')
+else
+    call plug#begin('~/.vim/plugged')
+endif
 
-runtime firenvim.vim
-
-Plug 'ThePrimeagen/vim-be-good'
+if has('nvim')
+    runtime firenvim.vim
+    Plug 'ThePrimeagen/vim-be-good'
+endif
 
 " Surround an object with a character
 Plug 'tpope/vim-surround'
@@ -69,12 +74,18 @@ set smartcase " match case when there is an upercase letter
 " escape disables highlighting of current match
 map <esc> :nohl <cr>
 
-set inccommand=nosplit " Live preview of replaced text
+
+if has('nvim')
+    set inccommand=nosplit " Live preview of replaced text
+endif
 
 " Y goes to the end of line
 map Y y$
 set number relativenumber " Hybrid numbers
-autocmd TermOpen * setlocal nonumber norelativenumber " Disable relative number in terminal
+
+if has('nvim')
+    autocmd TermOpen * setlocal nonumber norelativenumber " Disable relative number in terminal
+endif
 
 " Tabs
 " https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990
@@ -90,6 +101,4 @@ autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-
-
 

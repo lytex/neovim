@@ -72,7 +72,7 @@ set mouse=a " Use mouse
 set ignorecase " ignore case when searching
 set smartcase " match case when there is an upercase letter
 " escape disables highlighting of current match
-map <esc> :nohl <cr>
+map <silent> <esc> :nohl <cr>
 
 
 if has('nvim')
@@ -93,6 +93,7 @@ set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set shiftwidth=4 " number of spaces per level of indentation
 set expandtab " expand tabs into spaces
+set smartindent " insert indent automatically on new line
 
 " Different tab/space stops"
 autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab

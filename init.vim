@@ -20,7 +20,23 @@ Plug 'easymotion/vim-easymotion'
 map gs <Plug>(easymotion-prefix)
 
 " s__ jump to 2 characters
+" Example: dz12, dx12, | signals the cursor position
+"
+"      z →  12   |ah123 → 23
+"    ↗
+" d
+"    ↘
+"      x →  12   |ah123 → 123
+
 Plug 'justinmk/vim-sneak'
+" let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1 " Use same confing as ignorecase/smartcase
+
+onoremap <silent> z :<c-u>call sneak#wrap(v:operator,   2, 0, 3, 1)<cr>
+onoremap <silent> x :<c-u>call sneak#wrap(v:operator,   2, 0, 0, 1)<cr>
+onoremap <silent> Z :<c-u>call sneak#wrap(v:operator,   2, 1, 3, 1)<cr>
+onoremap <silent> X :<c-u>call sneak#wrap(v:operator,   2, 1, 0, 1)<cr>
+
 
 " Highlight possible f,t jumps
 Plug 'unblevable/quick-scope'
@@ -35,8 +51,6 @@ Plug 'psliwka/vim-smoothie'
 Plug 'rhysd/clever-f.vim'
 let g:clever_f_fix_key_direction = 1
 let g:clever_f_timeout_ms = 0.01
-map ; <Plug>(clever-f-repeat-forward)
-map , <Plug>(clever-f-repeat-back)
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

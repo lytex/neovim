@@ -31,12 +31,16 @@ map gs <Plug>(easymotion-prefix)
 Plug 'justinmk/vim-sneak'
 " let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " Use same confing as ignorecase/smartcase
+" jump with ; , after f,t across lines
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 onoremap <silent> z :<c-u>call sneak#wrap(v:operator,   2, 0, 3, 1)<cr>
 onoremap <silent> x :<c-u>call sneak#wrap(v:operator,   2, 0, 0, 1)<cr>
 onoremap <silent> Z :<c-u>call sneak#wrap(v:operator,   2, 1, 3, 1)<cr>
 onoremap <silent> X :<c-u>call sneak#wrap(v:operator,   2, 1, 0, 1)<cr>
-
 
 " Highlight possible f,t jumps
 Plug 'unblevable/quick-scope'
@@ -46,11 +50,6 @@ let g:highlightedyank_highlight_duration = 100
 
 " Smooth C-D,U,B,F movements
 Plug 'psliwka/vim-smoothie'
-
-" jump with ; , after f,t across lines
-Plug 'rhysd/clever-f.vim'
-let g:clever_f_fix_key_direction = 1
-let g:clever_f_timeout_ms = 0.01
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

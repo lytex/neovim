@@ -9,6 +9,8 @@ if has('nvim')
     Plug 'ThePrimeagen/vim-be-good'
 endif
 
+let mapleader = " "
+
 " Surround an object with a character
 Plug 'tpope/vim-surround'
 
@@ -55,6 +57,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Go to parent directories until there is an .git directory
 Plug 'airblade/vim-rooter'
+
+
+if has('nvim')
+    " Terminal integration in neovim
+    Plug 'nikvdp/neomux'
+endif
 
 runtime lang.vim
 runtime jumphl.vim

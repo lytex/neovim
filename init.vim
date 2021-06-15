@@ -84,8 +84,14 @@ set mouse=a " Use mouse
 
 set ignorecase " ignore case when searching
 set smartcase " match case when there is an upercase letter
-" escape disables highlighting of current match
-map <silent> <esc> :nohl <cr>
+
+if has('nvim')
+    " escape disables highlighting of current match
+    remap <silent> <esc> :nohl <cr>
+else
+    nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+    set hlsearch
+endif
 
 
 if has('nvim')

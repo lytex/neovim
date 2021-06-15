@@ -87,7 +87,7 @@ set smartcase " match case when there is an upercase letter
 
 if has('nvim')
     " escape disables highlighting of current match
-    remap <silent> <esc> :nohl <cr>
+    map <silent> <esc> :nohl <cr>
 else
     nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
     set hlsearch

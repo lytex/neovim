@@ -110,6 +110,7 @@ endif
 map Y y$
 set number relativenumber " Hybrid numbers
 
+set shell=zsh
 if has('nvim')
     autocmd TermOpen * setlocal nonumber norelativenumber " Disable relative number in terminal
 endif

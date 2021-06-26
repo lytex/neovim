@@ -62,6 +62,7 @@ Plug 'airblade/vim-rooter'
 if has('nvim')
     " Terminal integration in neovim
     Plug 'nikvdp/neomux'
+    let g:neomux_default_shell = "zsh"
 endif
 
 runtime lang.vim

@@ -131,7 +131,7 @@ inoremap <cr> <cr><c-g>u
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
-" Move text without copying it (ddp, xp, ...)
+" Swap text without copying it (ddp, xp, ...)
 " Since we use the system register, the unnamed register is fine to store it
 vnoremap H ""x2h""p
 vnoremap J :m '>+1<cr>gv=gv

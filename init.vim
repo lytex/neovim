@@ -108,6 +108,10 @@ endif
 
 " Y goes to the end of line
 map Y y$
+" Center vim after jumping to next/prev result
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 set number relativenumber " Hybrid numbers
 
 set shell=zsh

@@ -4,6 +4,7 @@ else
     call plug#begin('~/.vim/plugged')
 endif
 
+
 if has('nvim')
     runtime firenvim.vim
     Plug 'ThePrimeagen/vim-be-good'
@@ -49,6 +50,8 @@ Plug 'unblevable/quick-scope'
 
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 100
+
+Plug 'jiangmiao/auto-pairs'
 
 " Smooth C-D,U,B,F movements
 Plug 'psliwka/vim-smoothie'
@@ -114,6 +117,15 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 " Keep the cursor in place when joining lines
 nnoremap J mzJ`z
+
+" Set undo break points (<c-g>u) when typing one of those characters:
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap : :<c-g>u
+inoremap ] ]<c-g>u
+inoremap } }<c-g>u
+inoremap ) )<c-g>u
+inoremap <cr> <cr><c-g>u
 
 set number relativenumber " Hybrid numbers
 

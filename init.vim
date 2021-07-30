@@ -112,6 +112,8 @@ map Y y$
 " Center vim after jumping to next/prev result
 nnoremap n nzzzv
 nnoremap N Nzzzv
+" Keep the cursor in place when joining lines
+nnoremap J mzJ`z
 
 set number relativenumber " Hybrid numbers
 

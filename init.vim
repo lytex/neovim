@@ -110,6 +110,8 @@ if has('nvim')
     set inccommand=nosplit " Live preview of replaced text
 endif
 
+set undofile " Maintain undo history between sessions
+
 " Y goes to the end of line
 map Y y$
 " Center vim after jumping to next/prev result

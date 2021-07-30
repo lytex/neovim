@@ -143,6 +143,12 @@ nnoremap <leader>j :m .+1<cr>==
 nnoremap <leader>k :m .-2<cr>==
 nnoremap <leader>l ""x""p
 
+inoremap <c-h> <esc>h ""x2h""pa
+inoremap <c-k> <esc>:m .-2<cr>==a
+inoremap <c-j> <esc>:m .+1<cr>==a
+inoremap <c-l> <esc> ""x""pa
+
+
 set number relativenumber " Hybrid numbers
 
 set shell=zsh

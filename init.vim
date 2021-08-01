@@ -63,6 +63,16 @@ Plug 'airblade/vim-rooter'
 
 
 if has('nvim')
+    Plug 'sudormrfbin/cheatsheet.nvim'
+    " Dependencies of cheatsheet.nvim
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    map <c-h>c :lua require('telescope.builtin').help_tags()<cr>
+endif
+
+
+if has('nvim')
     " Terminal integration in neovim
     Plug 'nikvdp/neomux'
     let g:neomux_default_shell = "zsh"

@@ -18,3 +18,7 @@ nnoremap <silent> <leader><tab>d :tabclose<CR>
 nnoremap          <leader><tab>N :TabooOpen<Space>
 nnoremap          <leader><tab>r :TabooRename<Space>
 
+
+nnoremap <Leader>w <C-w>
+nnoremap <silent> <leader>qq :q<CR>
+

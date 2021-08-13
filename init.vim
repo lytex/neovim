@@ -78,6 +78,9 @@ if has('nvim')
     let g:neomux_default_shell = "zsh"
 endif
 
+
+runtime tabs.vim
+
 runtime lang.vim
 runtime jumphl.vim
 DoJumpHl 

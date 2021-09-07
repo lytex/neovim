@@ -161,14 +161,14 @@ nnoremap <leader>l ""x""p
 inoremap <c-h> <esc>h ""x2h""pa
 inoremap <c-k> <esc>:m .-2<cr>==a
 inoremap <c-j> <esc>:m .+1<cr>==a
-inoremap <c-l> <esc> ""x""pa
+inoremap <c-l> <esc> ""x""pa:set
 
 
 set number relativenumber " Hybrid numbers
 
 set shell=zsh
 if has('nvim')
-    autocmd TermOpen * setlocal nonumber norelativenumber " Disable relative number in terminal
+    autocmd TermOpen * setlocal nonumber norelativenumber mouse=a " Disable relative number in terminal and mouse support
 endif
 
 " Tabs

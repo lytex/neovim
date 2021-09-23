@@ -76,6 +76,8 @@ if has('nvim')
     " Terminal integration in neovim
     Plug 'nikvdp/neomux'
     let g:neomux_default_shell = "zsh"
+    let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+    autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
 endif
 
 

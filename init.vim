@@ -78,6 +78,7 @@ if has('nvim')
     let g:neomux_default_shell = "zsh"
     let $GIT_EDITOR = 'nvr -cc split --remote-wait'
     autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
+    nmap ZC :w | :bd
 endif
 
 
@@ -167,6 +168,18 @@ inoremap <c-l> <esc> ""x""pa:set
 
 
 set number relativenumber " Hybrid numbers
+
+function ToggleRelativeNumber()
+    if &relativenumber
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunction
+
+" Toggle line numbers with <leader>tl
+nmap <silent>  <leader>tl :call ToggleRelativeNumber()<CR>
+
 
 set shell=zsh
 if has('nvim')

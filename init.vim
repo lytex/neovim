@@ -78,7 +78,8 @@ if has('nvim')
     let g:neomux_default_shell = "zsh"
     let $GIT_EDITOR = 'nvr -cc split --remote-wait'
     autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
-    nmap ZC :w | :bd
+    nnoremap <silent> ZC :<C-u>w<CR>:<C-u>bd<CR>
+    nnoremap <silent> ZB :<C-u>q!<CR>
 endif
 
 

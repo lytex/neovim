@@ -10,3 +10,6 @@ let g:python_highlight_all = 1
 
 " SourceTrail integration
 Plug 'CoatiSoftware/vim-sourcetrail'
+
+Plug 'sheerun/vim-polyglot'
+

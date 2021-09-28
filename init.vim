@@ -113,7 +113,7 @@ set clipboard=unnamedplus
 set mouse=a " Use mouse
 
 set colorcolumn=80,120
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn ctermbg=0 guibg=black
 
 set ignorecase " ignore case when searching
 set smartcase " match case when there is an upercase letter

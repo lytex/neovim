@@ -204,6 +204,7 @@ set smartindent " insert indent automatically on new line
 
 " Different tab/space stops"
 autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab

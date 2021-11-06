@@ -141,6 +141,9 @@ nnoremap N Nzzzv
 " Keep the cursor in place when joining lines
 nnoremap J mzJ`z
 
+map <silent> [b :<C-u>:bprev<CR>
+map <silent> ]b :<C-u>:bnext<CR>
+
 " Set undo break points (<c-g>u) when typing one of those characters:
 inoremap , ,<c-g>u
 inoremap . .<c-g>u

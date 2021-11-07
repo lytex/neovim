@@ -18,6 +18,9 @@ Plug 'tpope/vim-surround'
 " Comments with gc
 Plug 'tpope/vim-commentary'
 
+" Use [_  ]_ movements
+Plug 'tpope/vim-unimpaired'
+
 " Highlight possible motions
 Plug 'easymotion/vim-easymotion'
 map gs <Plug>(easymotion-prefix)
@@ -140,9 +143,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 " Keep the cursor in place when joining lines
 nnoremap J mzJ`z
-
-map <silent> [b :<C-u>:bprev<CR>
-map <silent> ]b :<C-u>:bnext<CR>
 
 " Set undo break points (<c-g>u) when typing one of those characters:
 inoremap , ,<c-g>u

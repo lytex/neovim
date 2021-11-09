@@ -103,6 +103,8 @@ call plug#end()
 
 set nocompatible " No compatibility with vi
 
+set lazyredraw " No fancy redraw stuff, :set lz if you want to enable it
+
 " Remap escape
 inoremap jk <Esc>
 
@@ -123,6 +125,7 @@ set smartcase " match case when there is an upercase letter
 
 if has('nvim')
     " escape disables highlighting of current match
+    " Somehow this breaks regular vim
     map <silent> <esc> :nohl <cr>
 else
     nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>

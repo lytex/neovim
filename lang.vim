@@ -8,6 +8,9 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-python/python-syntax'
 let g:python_highlight_all = 1
 
+let g:black_linelength = 120
+Plug 'psf/black'
+
 Plug 'jsfaint/gen_tags.vim'
 
 " SourceTrail integration

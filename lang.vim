@@ -10,6 +10,8 @@ let g:python_highlight_all = 1
 
 let g:black_linelength = 120
 Plug 'psf/black'
+autocmd FileType python autocmd BufWritePre call Black()
+autocmd FileType json autocmd BufWritePre call Black()
 
 Plug 'jsfaint/gen_tags.vim'
 

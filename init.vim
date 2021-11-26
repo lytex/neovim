@@ -206,11 +206,4 @@ set expandtab " expand tabs into spaces
 set smartindent " insert indent automatically on new line
 
 " Different tab/space stops"
-autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype markdown setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-
+autocmd Filetype yaml,markdown,html,css,json,javascript,sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab

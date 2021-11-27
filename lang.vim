@@ -8,10 +8,14 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-python/python-syntax'
 let g:python_highlight_all = 1
 
+
+filetype plugin on
 let g:black_linelength = 120
 Plug 'psf/black'
-autocmd FileType python autocmd BufWritePre call Black()
-autocmd FileType json autocmd BufWritePre call Black()
+autocmd BufWritePre *.py Black
+autocmd BufWritePre *.json Black
+autocmd BufWritePre *.geojson Black
+Plug 'python-rope/ropevim'
 
 Plug 'jsfaint/gen_tags.vim'
 

@@ -1,35 +1,7 @@
-lua require('plugins')
-
-if has('nvim')
-    runtime firenvim.vim
-    " Plug 'ThePrimeagen/vim-be-good'
-endif
-
 let mapleader = " "
 
-" Surround an object with a character
-" Plug 'tpope/vim-surround'
-
-" Comments with gc
-" Plug 'tpope/vim-commentary'
-
-" Use [_  ]_ movements
-" Plug 'tpope/vim-unimpaired'
-
-" Highlight possible motions
-" Plug 'easymotion/vim-easymotion'
 map gs <Plug>(easymotion-prefix)
 
-" s__ jump to 2 characters
-" Example: dz12, dx12, | signals the cursor position
-"
-"      z →  12   |ah123 → 23
-"    ↗
-" d
-"    ↘
-"      x →  12   |ah123 → 123
-
-" Plug 'justinmk/vim-sneak'
 " let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " Use same confing as ignorecase/smartcase
 " jump with ; , after f,t across lines
@@ -43,43 +15,17 @@ onoremap <silent> x :<c-u>call sneak#wrap(v:operator,   2, 0, 0, 1)<cr>
 onoremap <silent> Z :<c-u>call sneak#wrap(v:operator,   2, 1, 3, 1)<cr>
 onoremap <silent> X :<c-u>call sneak#wrap(v:operator,   2, 1, 0, 1)<cr>
 
-" Highlight possible f,t jumps
-" Plug 'unblevable/quick-scope'
-
-" Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 100
 
-" Plug 'jiangmiao/auto-pairs'
-
-" Smooth C-D,U,B,F movements
-" Plug 'psliwka/vim-smoothie'
-
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
-" Go to parent directories until there is an .git directory
-" Plug 'airblade/vim-rooter'
+map <c-h>c :lua require('telescope.builtin').help_tags()<cr>
 
 
-if has('nvim')
-    " Plug 'sudormrfbin/cheatsheet.nvim'
-    " Dependencies of cheatsheet.nvim
-    " Plug 'nvim-lua/popup.nvim'
-    " Plug 'nvim-lua/plenary.nvim'
-    " Plug 'nvim-telescope/telescope.nvim'
-    map <c-h>c :lua require('telescope.builtin').help_tags()<cr>
-endif
-
-
-if has('nvim')
-    " Terminal integration in neovim
-    " Plug 'nikvdp/neomux'
-    let g:neomux_default_shell = "zsh"
-    let $GIT_EDITOR = 'nvr -cc split --remote-wait'
-    autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
-    " C-u means erase selection like '<,'>:
-    nnoremap <silent> ZC :<C-u>w<CR>:<C-u>bd<CR>
-    nnoremap <silent> ZB :<C-u>bd!<CR>
-endif
+let g:neomux_default_shell = "zsh"
+let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
+" C-u means erase selection like '<,'>:
+nnoremap <silent> ZC :<C-u>w<CR>:<C-u>bd<CR>
+nnoremap <silent> ZB :<C-u>bd!<CR>
 
 
 runtime tabs.vim
@@ -88,13 +34,6 @@ runtime lang.vim
 runtime jumphl.vim
 DoJumpHl 
 
-runtime yinote.vim
-
-" Plug 'patstockwell/vim-monokai-tasty'
-
-" Plug 'ActivityWatch/aw-watcher-vim'
-
-" call plug#end()
 
 set nocompatible " No compatibility with vi
 
@@ -187,10 +126,7 @@ endfunction
 nmap <silent>  <leader>tl :call ToggleRelativeNumber()<CR>
 
 
-set shell=zsh
-if has('nvim')
-    autocmd TermOpen * setlocal nonumber norelativenumber mouse=a " Disable relative number in terminal and mouse support
-endif
+autocmd TermOpen * setlocal nonumber norelativenumber mouse=a " Disable relative number in terminal and mouse support
 
 " Tabs
 " https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990
@@ -202,3 +138,4 @@ set smartindent " insert indent automatically on new line
 
 " Different tab/space stops"
 autocmd Filetype yaml,markdown,html,css,json,javascript,sql setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+

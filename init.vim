@@ -1,28 +1,23 @@
-if has('nvim')
-    call plug#begin(stdpath('data') . '/plugged')
-else
-    call plug#begin('~/.vim/plugged')
-endif
-
+lua require('plugins')
 
 if has('nvim')
     runtime firenvim.vim
-    Plug 'ThePrimeagen/vim-be-good'
+    " Plug 'ThePrimeagen/vim-be-good'
 endif
 
 let mapleader = " "
 
 " Surround an object with a character
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 
 " Comments with gc
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
 
 " Use [_  ]_ movements
-Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-unimpaired'
 
 " Highlight possible motions
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 map gs <Plug>(easymotion-prefix)
 
 " s__ jump to 2 characters
@@ -34,7 +29,7 @@ map gs <Plug>(easymotion-prefix)
 "    ↘
 "      x →  12   |ah123 → 123
 
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
 " let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1 " Use same confing as ignorecase/smartcase
 " jump with ; , after f,t across lines
@@ -49,35 +44,35 @@ onoremap <silent> Z :<c-u>call sneak#wrap(v:operator,   2, 1, 3, 1)<cr>
 onoremap <silent> X :<c-u>call sneak#wrap(v:operator,   2, 1, 0, 1)<cr>
 
 " Highlight possible f,t jumps
-Plug 'unblevable/quick-scope'
+" Plug 'unblevable/quick-scope'
 
-Plug 'machakann/vim-highlightedyank'
+" Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 100
 
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " Smooth C-D,U,B,F movements
-Plug 'psliwka/vim-smoothie'
+" Plug 'psliwka/vim-smoothie'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 " Go to parent directories until there is an .git directory
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 
 
 if has('nvim')
-    Plug 'sudormrfbin/cheatsheet.nvim'
+    " Plug 'sudormrfbin/cheatsheet.nvim'
     " Dependencies of cheatsheet.nvim
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    " Plug 'nvim-lua/popup.nvim'
+    " Plug 'nvim-lua/plenary.nvim'
+    " Plug 'nvim-telescope/telescope.nvim'
     map <c-h>c :lua require('telescope.builtin').help_tags()<cr>
 endif
 
 
 if has('nvim')
     " Terminal integration in neovim
-    Plug 'nikvdp/neomux'
+    " Plug 'nikvdp/neomux'
     let g:neomux_default_shell = "zsh"
     let $GIT_EDITOR = 'nvr -cc split --remote-wait'
     autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
@@ -95,11 +90,11 @@ DoJumpHl
 
 runtime yinote.vim
 
-Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'patstockwell/vim-monokai-tasty'
 
-Plug 'ActivityWatch/aw-watcher-vim'
+" Plug 'ActivityWatch/aw-watcher-vim'
 
-call plug#end()
+" call plug#end()
 
 set nocompatible " No compatibility with vi
 

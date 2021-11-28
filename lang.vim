@@ -1,26 +1,48 @@
-Plug 'metakirby5/codi.vim'
-Plug 'jeetsukumaran/vim-pythonsense'
+lua << EOF
+use {
+    'metakirby5/codi.vim',
+}
 
-" Indentation level text object
-Plug 'michaeljsmith/vim-indent-object'
+use {
+    'jeetsukumaran/vim-pythonsense',
+}
 
-" Enable advanced syntax hl such as fstrings, self, @decorator
-Plug 'vim-python/python-syntax'
-let g:python_highlight_all = 1
+-- Indentation level text object
+use {
+    'michaeljsmith/vim-indent-object',
+}
 
+-- Enable advanced syntax hl such as fstrings, self, @decorator
+use {
+    'vim-python/python-syntax',
+}
+-- Yes, this is actually vimscript inside lua inside vimscript
+vim.cmd([[let g:python_highlight_all = 1]])
 
-filetype plugin on
-let g:black_linelength = 120
-Plug 'psf/black'
-autocmd BufWritePre *.py Black
-autocmd BufWritePre *.json Black
-autocmd BufWritePre *.geojson Black
-Plug 'python-rope/ropevim'
+vim.cmd([[filetype plugin on]])
+vim.cmd([[let g:black_linelength = 120]])
+use {
+    'psf/black'
+}
 
-Plug 'jsfaint/gen_tags.vim'
+vim.cmd([[autocmd BufWritePre *.py Black]])
+vim.cmd([[autocmd BufWritePre *.json Black]])
+vim.cmd([[autocmd BufWritePre *.geojson Black]])
 
-" SourceTrail integration
-Plug 'CoatiSoftware/vim-sourcetrail'
+use {
+    'python-rope/ropevim'
+}
 
-Plug 'sheerun/vim-polyglot'
+use {
+    'jsfaint/gen_tags.vim'
+}
 
+-- SourceTrail integration
+use {
+    'CoatiSoftware/vim-sourcetrail'
+}
+
+use {
+    'sheerun/vim-polyglot'
+}
+EOF

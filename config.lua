@@ -179,5 +179,9 @@ lvim.plugins = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
 
-vim.cmd 'source init.vim'
 
+vim.cmd 'source ~/.config/lvim/init.vim'
+
+-- Bring back gt, gT, do not use barbar.nvim
+-- https://github.com/LunarVim/LunarVim/issues/1272
+lvim.builtin.bufferline.active = false
